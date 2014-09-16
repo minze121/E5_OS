@@ -1,3 +1,292 @@
+-++-
+-
+0.9.5(2014-09-15)
+
+
+
+############################### 2014-09-15 ############################### 
+
+Package:
+	Remove
+
+		sudo apt-get -y purge gnome-contacts gnome-orca gnome-user-share
+
+Xdg Autostart:
+	Remove	
+		Hardware Sensor Indicator
+		System Load Indicator
+	        chat
+		Notification Daemon
+		Screensaver
+		SSH Key Agent
+		Orca screen reader
+		Personal File Sharing
+		
+
+############################### 2014-09-15 ############################### 
+
+Package:
+	Remove
+
+		sudo apt-get remove xul-ext-ubufox xul-ext-unity xul-ext-webaccounts xul-ext-websites-integration
+
+
+############################### 2014-09-15 ############################### 
+
+Package:
+	Remove
+
+		sudo apt-get remove unity unity-2d unity-2d-panel unity-2d-spread unity-asset-pool unity-services unity-lens-files unity-lens-music unity-lens-applications gir1.2-unity-5.0 libunity-core-6.0-8 indicator-sound indicator-power indicator-appmenu libindicator7 indicator-application indicator-datetime indicator-messages nux-tools libunity-misc4 unity-2d-common
+		Below will be removed:
+			gir1.2-unity-5.0 gnome-control-center-datetime indicator-application
+			  indicator-appmenu indicator-datetime indicator-messages indicator-power
+			  indicator-sound libunity-core-6.0-8 libunity-misc4
+			  lightdm-remote-session-uccsconfigure nux-tools unity unity-asset-pool
+			  unity-lens-applications unity-lens-files unity-lens-music unity-lens-photos
+			  unity-lens-video unity-scope-audacious unity-scope-chromiumbookmarks
+			  unity-scope-clementine unity-scope-colourlovers unity-scope-devhelp
+			  unity-scope-firefoxbookmarks unity-scope-gmusicbrowser unity-scope-gourmet
+			  unity-scope-guayadeque unity-scope-manpages unity-scope-musique
+			  unity-scope-openclipart unity-scope-texdoc unity-scope-tomboy
+			  unity-scope-virtualbox unity-scope-zotero unity-services
+			  unity-webapps-common
+
+
+############################### 2014-09-15 ############################### 
+
+Package:
+	Add 
+		sudo apt-get install preload
+
+	Remove
+		(autoremove)
+
+		sudo apt-get remove keyutils libck-connector0 ncurses-term python-requests python-urllib3
+  vim-runtime
+
+
+		sudo apt-get remove account-plugin-facebook account-plugin-flickr account-plugin-google account-plugin-twitter account-plugin-windows-live
+
+
+
+
+
+BootTime:
+        00.27.5s
+
+############################### 2014-09-15 ############################### 
+Gnome:
+      Disabled:  
+          1.bluetooth
+		modify /etc/init/bluetooth.conf:
+			#start on started dbus 
+			#stop on stopping dbus
+          2.disable tty1~tty7, open them throught:
+                 sudo initctl e5-tty1
+	  3.disable ubuntu message notification system:
+		sudo mv /usr/lib/notification-daemon/notification-daemon /usr/lib/notification-daemon/notification-daemon-bak
+		sudo mv /usr/lib/x86_64-linux-gnu/notify-osd /usr/lib/x86_64-linux-gnu/notify-osd-bak
+	   
+          4.disable disc check:
+               modify the /etc/fstab file:
+                     modify the last two columns values from other value to 0.
+          5. disable the blow services:
+               dns-clean,ppp-dns,kerneloops,saned,brltty,bluetooth
+                    #sudo update-rc.d -f kerneloops remove
+		    #sudo update-rc.d -f dns-clean remove
+		    #sudo update-rc.d -f ppp-dns remove   
+		    #sudo update-rc.d  -f brltty remove  
+		    #sudo update-rc.d -f bluetooth remove
+
+Xorg:
+	Add the blanktime(0) function throught modify the /etc/X11/xorg.conf file.
+
+		#  hibit the dim and screensaver
+			option "BlankTime" "0"
+			option "StandbyTime" "0"
+			option "SuspendTime" "0"
+			option "OffTime" "0"
+
+BootTime:
+        00.29s
+
+
+
+-++-
+-
+
+-++-
+-
+0.9.5(2014-09-12)
+############################### 2014-09-12 ############################### 
+Gnome:
+      Disabled:  
+          1.desktop(gnome-tweak-tool)
+          2.remvoe gnome-panel (reduce boot time from 00.38s to 00.29s)
+            mv /usr/bin/gnome-panel  /usr/bin/gnome-panel-bak
+
+BootTime:
+        00.29s
+
+Package:
+	Remove:
+	   1.telnet
+           2.avahi
+              sudo apt-get -y purge avahi-autopd avahi-daemon avahi-utils
+           3.remmina(VNC)
+	      sudo apt-get -y purge remmina
+
+-++-
+-
+0.9.5(2014-09-11)
+
+############################### 2014-09-11 ############################### 
+Code Package:
+	Remove:
+	      1. remove ScapeLibUnitTest
+	         rm -rf /home/devel/ScapeLibUnitTest
+              2. move Touch_Demo to /E5 folder
+                 mv /home/devel/Touch_Demo /E5/Touch_Demo
+	      3. remove eclipse
+	         rm -rf /home/devel/eclipse
+	Add:
+  	      1. e5looger
+    	         copy e5looger to /E5/script/logger/
+Upstart:
+	1.e5logger
+	
+package:
+	Remove:       
+	      1.lm-sensors
+                sudo apt-get -y purge lm-sensors sensors-applet indicator-sensors indicator-multiload
+
+BootTime:00:38s
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-++-
+-
+0.9.4(2014-09-04)
+
+
+
+############################### 2014-09-04 ############################### 
+
+
+
+package:
+        Remove unused the pacage:
+           	ssh-client,apport,aisleriot,startup disk,transmission bitTOrrent Client,totem,
+           	,friends,file-roller,gucharmap,caclulcator.
+ 
+	
+BootTime:00:42s
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-++-
+-
+0.9.3(2014-09-03)
+
+
+
+############################### 2014-09-03 ############################### 
+
+E5_script:
+	Modify:         
+	     1.E5/script/checkE5Statue.py
+               remove changeVTSAttribute function(repeat in E5_Drivers.sh )
+             2./etc/ligth/ligthd.conf
+                remove display-setup-script=/E5/script/src_mount.sh
+	Remove:	
+	     1. remove src_mount.sh under /E5, This function realize in /etc/fstab
+         
+
+package:
+        Remove unused the pacage:
+           1.empathy
+            sudo apt-get -y purge empathy
+            sudo apt-get  -y purge empathy-common
+           2.thunder
+            sudo apt-get -y purge thunderbird*
+           3.software-center
+            sudo apt-get -y purge software-center
+           4.yelp
+             sudo apt-get -y purge yelp*
+           5. deja-dup 
+              sudo apt-get -y purge deja-dup
+          6.whoopsie
+              sudo apt-get -y purge whoopsie
+          7. samba 
+              sudo apt-get -y purge  samba
+          8. mines
+              sudo apt-get -y purge gnome-mines
+          9. Mahjongg
+              sudo apt-get -y purge gnome-mahjongg
+          10.sudoku
+              sudo apt-get -y purge gnome-sudoku
+          11.rhythmobox
+               sudo apt-get -y purge rhythmobox*
+          12.office 
+               sudo apt-get -y purge libreoffice*
+          13. vim
+               sudo apt-get -y purge  vim
+          14. subversion
+                sudo apt-get -y purge  subversion
+          15.meld
+                sudo apt-get -y purge  meld
+          16. ssh
+                sudo apt-get -y purge openssh-server
+
+	
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+-++-
+-
+0.9.2(2014-09-01)
+
+
+
+############################### 2014-09-01 ############################### 
+
+kernel:
+	1.remove kernel source package
+            rm -rf /home/devel/kerenle
+
+E5_config:
+	1.move E5_config from /home/devel to /opt/
+            mv  /home/devel/E5_config /opt/
+
+linker sciprt:
+	Modify:
+               1.modify profile and bin_script under /E5/
+            	   ln -s /opt/E5_config/bin_script /E5/bin_script
+            	   ln  -s  /opt/E5_config/profile  /E5/profile
+               2.modify /opt/intel soft linker
+            	   ln -s /opt/E5_config/intel/  /opt/intel
+	Remove:
+	       1. remove the unvalid softer linker file
+            	 rm -rf /E5/bin
+		
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+-++-
+-
 0.9.1(2014-06-28)
 
 
@@ -5,7 +294,7 @@
 ############################### 2014-06-28 ############################### 
 
 Package:
-	sudo apt-get install indicator-sensors indicator-multiload libtbb-dev libgtk2.0-dev pkg-config
+	sudo apt-get install indicator-sensors indicator-multiload libtbb-dev libgtk2.0-dev
 
 		indicator-sensors 
 				:Hardware Sensors Indicator
