@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/edan_logo.png</file>
+        <file>res/ultra.png</file>
+    </qresource>
+</RCC>
