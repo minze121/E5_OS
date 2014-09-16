@@ -1,0 +1,34 @@
+
+
+#################### Slove the screen flash question ####################
+
+	——>Device Drivers
+		——>Graphics support
+			——>Support for frame buffer devices
+				Enable firmware EDID    (Module)
+
+
+
+Effect:
+
+
+Gentoo Linux设置文本模式下的分辨率
+2013-01-24 01:23:28
+1.编译内核，安装图形驱动
+
+Device Drivers -> 
+    <*> Connector - unified userspace <-> kernelspace linker ---> 
+    Graphics support -> 
+        [*] Support for frame buffer devices ---> 
+            [*] Enable firmware EDID 
+            ... 
+            [*] VESA VGA graphics support 
+
+2.修改grub.conf
+
+kernel /boot/kernel root=/dev/sda3 vga=0x341
+
+相比0x341，0x318用的更多，但现在的机器不支持（也许配置有问题？）
+0x341=833, 1024x768x32
+
+0x318=792, 1024x768x24
