@@ -1,8 +1,7 @@
 
+
+#######################################################################################################################
 0.9.5
-
-
-
 ############################### 2014-09-17 ###############################
 
 
@@ -10,7 +9,8 @@ Tool:
     replace the wodim(DVD)
 
 
-
+#######################################################################################################################
+0.9.5
 ############################### 2014-09-15 ############################### 
 
 Package:
@@ -75,9 +75,6 @@ Package:
 		sudo apt-get remove account-plugin-facebook account-plugin-flickr account-plugin-google account-plugin-twitter account-plugin-windows-live
 
 
-
-
-
 BootTime:
         00.27.5s
 
@@ -118,12 +115,7 @@ BootTime:
         00.29s
 
 
-
--++-
--
-
--++-
--
+#######################################################################################################################
 0.9.5(2014-09-12)
 ############################### 2014-09-12 ############################### 
 Gnome:
@@ -143,10 +135,9 @@ Package:
            3.remmina(VNC)
 	      sudo apt-get -y purge remmina
 
--++-
--
-0.9.5(2014-09-11)
 
+#######################################################################################################################
+0.9.5(2014-09-11)
 ############################### 2014-09-11 ############################### 
 Code Package:
 	Remove:
@@ -170,11 +161,7 @@ package:
 BootTime:00:38s
 
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
--++-
--
+#######################################################################################################################
 0.9.4(2014-09-04)
 
 
@@ -191,77 +178,60 @@ package:
 	
 BootTime:00:42s
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
--++-
--
+
+#######################################################################################################################
 0.9.3(2014-09-03)
-
-
-
-############################### 2014-09-03 ############################### 
+############################### 2014-09-03 ###############################
 
 E5_script:
 	Modify:         
-	     1.E5/script/checkE5Statue.py
-               remove changeVTSAttribute function(repeat in E5_Drivers.sh )
-             2./etc/ligth/ligthd.conf
+            1.E5/script/checkE5Statue.py
+                remove changeVTSAttribute function(repeat in E5_Drivers.sh )
+            2./etc/ligth/ligthd.conf
                 remove display-setup-script=/E5/script/src_mount.sh
 	Remove:	
-	     1. remove src_mount.sh under /E5, This function realize in /etc/fstab
+            1. remove src_mount.sh under /E5, This function realize in /etc/fstab
          
 
 package:
         Remove unused the pacage:
            1.empathy
-            sudo apt-get -y purge empathy
-            sudo apt-get  -y purge empathy-common
+                sudo apt-get -y purge empathy
+                sudo apt-get  -y purge empathy-common
            2.thunder
-            sudo apt-get -y purge thunderbird*
+                sudo apt-get -y purge thunderbird*
            3.software-center
-            sudo apt-get -y purge software-center
+                sudo apt-get -y purge software-center
            4.yelp
-             sudo apt-get -y purge yelp*
+                sudo apt-get -y purge yelp*
            5. deja-dup 
-              sudo apt-get -y purge deja-dup
-          6.whoopsie
-              sudo apt-get -y purge whoopsie
-          7. samba 
-              sudo apt-get -y purge  samba
-          8. mines
-              sudo apt-get -y purge gnome-mines
-          9. Mahjongg
-              sudo apt-get -y purge gnome-mahjongg
-          10.sudoku
-              sudo apt-get -y purge gnome-sudoku
-          11.rhythmobox
+                sudo apt-get -y purge deja-dup
+           6.whoopsie
+                sudo apt-get -y purge whoopsie
+           7.samba
+                sudo apt-get -y purge  samba
+           8.mines
+                sudo apt-get -y purge gnome-mines
+           9.Mahjongg
+                sudo apt-get -y purge gnome-mahjongg
+           10.sudoku
+                sudo apt-get -y purge gnome-sudoku
+           11.rhythmobox
                sudo apt-get -y purge rhythmobox*
-          12.office 
+           12.office
                sudo apt-get -y purge libreoffice*
-          13. vim
+           13.vim
                sudo apt-get -y purge  vim
-          14. subversion
+           14.subversion
                 sudo apt-get -y purge  subversion
-          15.meld
+           15.meld
                 sudo apt-get -y purge  meld
-          16. ssh
+           16.ssh
                 sudo apt-get -y purge openssh-server
 
-	
-
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
--++-
--
+#######################################################################################################################
 0.9.2(2014-09-01)
-
-
-
 ############################### 2014-09-01 ############################### 
 
 kernel:
@@ -274,30 +244,19 @@ E5_config:
 
 linker sciprt:
 	Modify:
-               1.modify profile and bin_script under /E5/
-            	   ln -s /opt/E5_config/bin_script /E5/bin_script
-            	   ln  -s  /opt/E5_config/profile  /E5/profile
-               2.modify /opt/intel soft linker
-            	   ln -s /opt/E5_config/intel/  /opt/intel
+            1.modify profile and bin_script under /E5/
+                ln -s /opt/E5_config/bin_script /E5/bin_script
+                ln  -s  /opt/E5_config/profile  /E5/profile
+            2.modify /opt/intel soft linker
+                ln -s /opt/E5_config/intel/  /opt/intel
 	Remove:
 	       1. remove the unvalid softer linker file
             	 rm -rf /E5/bin
 		
 
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-
-
--++-
--
+#######################################################################################################################
 0.9.1(2014-06-28)
-
-
-
 ############################### 2014-06-28 ############################### 
 
 Package:
@@ -326,23 +285,14 @@ Tool
 
 
 develop package
-	opencv    cmake CMAKE_BUILD_TYPE=Release .
+	opencv    cmake CMAKE_BUILD_TYPE=Release  （Approach） .
 		: rebuild the opencv in order to slove below question
 			OpenCV Error: Unspecified error (The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Carbon support. If you are on Ubuntu or Debian, install libgtk2.0-dev and pkg-config, then re-run cmake or configure script) in cvShowImage, file /home/devel/opencv-2.4.9/modules/highgui/src/window.cpp, line 501
 
 
 
-
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-
+#######################################################################################################################
 0.9(2014-06-09)
-
-
-
 ############################### 2014-06-09 ############################### 
 Package:
 	sudo apt-get install monodevelop sqliteman python-tz inxi python-paramiko
